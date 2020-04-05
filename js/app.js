@@ -1,14 +1,14 @@
 const container = document.querySelector(".container")
 const coffees = [
-  { name: "Perspiciatis", image: "https://cnet2.cbsistatic.com/img/e0oF8FTfBwW_9gzMgIdZmNZydDI=/940x0/2020/04/02/45698515-984b-4c4d-8a70-9fdc63386db8/winter-magazine-coffee-shoot-23.jpg" },
-  { name: "Voluptatem", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/A_small_cup_of_coffee.JPG/1200px-A_small_cup_of_coffee.JPG" },
-  { name: "Explicabo", image: "https://media3.s-nbcnews.com/j/newscms/2019_33/2203981/171026-better-coffee-boost-se-329p_67dfb6820f7d3898b5486975903c2e51.fit-760w.jpg" },
-  { name: "Rchitecto", image: "https://blog.warriorcoffee.com/hubfs/_MG_3386.jpg" },
-  { name: " Beatae", image: "https://specials-images.forbesimg.com/imageserve/1152308114/960x0.jpg?fit=scale" },
-  { name: " Vitae", image: "https://article.images.consumerreports.org/f_auto/prod/content/dam/CRO%20Images%202018/Health/June/CR-Health-Inlinehero-Health-Does-Espresso-or-Coffee-Have-More-Caffeine-11-16" },
-  { name: "Inventore", image: "https://media.distractify.com/brand-img/zV1CK5HV_/0x0/dalgona-coffee-1584724125060.png" },
-  { name: "Veritatis", image: "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/321784_2200-732x549.jpg" },
-  { name: "Accusantium", image: "https://www.incimages.com/uploaded_files/image/970x450/getty_938993594_391384.jpg" },
+  { name: "Perspiciatis", image: "images/coffee1.jpg" },
+  { name: "Voluptatem", image: "images/coffee2.jpg" },
+  { name: "Explicabo", image: "images/coffee3.jpg" },
+  { name: "Rchitecto", image: "images/coffee4.jpg" },
+  { name: " Beatae", image: "images/coffee5.jpg" },
+  { name: " Vitae", image: "images/coffee6.jpg" },
+  { name: "Inventore", image: "images/coffee7.jpg" },
+  { name: "Veritatis", image: "images/coffee8.jpg" },
+  { name: "Accusantium", image: "images/coffee9.jpg" },
 ]
 
 const showCoffees = () => {
@@ -27,3 +27,12 @@ const showCoffees = () => {
 }
 
 document.addEventListener("DOMContentLoaded", showCoffees)
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function() {
+    navigator.serviceWorker
+      .register("/serviceWorker.js")
+      .then(res => console.log("service worker registered"))
+      .catch(err => console.log("service worker not registered", err))
+  })
+}
