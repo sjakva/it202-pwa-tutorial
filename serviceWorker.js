@@ -13,6 +13,10 @@ const assets = [
   "/images/coffee7.jpg",
   "/images/coffee8.jpg",
   "/images/coffee9.jpg",
+  "/images/icons/icon-192x192.png",
+  "/images/icons/icon-512x512.png",
+  "/images/icons/apple-touch-icon.png",
+  "/favicon.ico"
 ]
 
 self.addEventListener("install", installEvent => {
